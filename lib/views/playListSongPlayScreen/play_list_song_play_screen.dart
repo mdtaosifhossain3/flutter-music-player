@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:music_player/constants/colors.dart';
 import 'package:music_player/resources/appUrls/image_urls.dart';
-import 'package:music_player/resources/components/customWidgets/custom_appbar.dart';
 import 'package:music_player/resources/components/customWidgets/custom_text.dart';
 import 'package:music_player/resources/components/widgets/appbar_widget.dart';
 import 'package:music_player/resources/components/widgets/song_list_widget.dart';

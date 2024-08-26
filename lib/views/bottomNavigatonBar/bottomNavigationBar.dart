@@ -5,8 +5,8 @@ import 'package:music_player/resources/appUrls/image_urls.dart';
 import 'package:music_player/resources/components/customWidgets/custom_text.dart';
 import 'package:music_player/resources/components/customWidgets/custom_textField.dart';
 import 'package:music_player/views/homeScreen/home_screen.dart';
+import 'package:music_player/views/settingsScreen/settings_screen.dart';
 import 'package:music_player/views/songScreen/song_screen.dart';
-import 'package:music_player/views/splashScreen/splash_screen.dart';
 
 class Bottomnavigationbar extends StatefulWidget {
   const Bottomnavigationbar({super.key});
@@ -21,7 +21,7 @@ class _BottomnavigationbarState extends State<Bottomnavigationbar> {
   List<Widget> myScreens = [
     const HomeScreen(),
     const SongScreen(),
-    const SplashScreen(),
+    const SettingsScreen(),
   ];
   @override
   Widget build(BuildContext context) {

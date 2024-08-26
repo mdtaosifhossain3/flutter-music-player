@@ -15,11 +15,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-        title: 'Music App',
-        debugShowCheckedModeBanner: false,
-        theme: darkTheme,
-        home: const PlayListSongPlayScreens() //Bottomnavigationbar(),
-        // getPages: AppRoutes.appRoutes(),
-        );
+      title: 'Music App',
+      debugShowCheckedModeBanner: false,
+      theme: darkTheme,
+      home: const Bottomnavigationbar(),
+      // getPages: AppRoutes.appRoutes(),
+    );
   }
 }

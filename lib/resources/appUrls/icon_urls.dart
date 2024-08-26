@@ -17,4 +17,10 @@ class IconUrls {
   static String soundBarIconURL = '${baseURL}sound_bar.png';
   static String stopwatchIconURL = '${baseURL}stopwatch.png';
   static String palyListButtonIconURL = '${baseURL}play_list_button.png';
+  static String advanceIconURL = '${baseURL}advance.png';
+  static String headphonesIconURL = '${baseURL}headphones.png';
+  static String padlockIconURL = '${baseURL}padlock.png';
+  static String settingsIconURL = '${baseURL}settings.png';
+  static String youtubeIconURL = '${baseURL}youtube.png';
+  static String volumeIconURL = '${baseURL}volume.png';
 }
