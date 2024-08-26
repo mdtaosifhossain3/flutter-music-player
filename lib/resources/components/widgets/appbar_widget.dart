@@ -12,5 +12,10 @@ PreferredSizeWidget appbarWidget({label}) => AppBar(
         fontSize: 17,
         color: midWhiteColor,
       ),
-      actions: const [Icon(Icons.search)],
+      actions: const [
+        Padding(
+          padding: EdgeInsets.only(right: 14.0),
+          child: Icon(Icons.search),
+        )
+      ],
     );

@@ -24,7 +24,7 @@ class _SongScreenState extends State<SongScreen> with TickerProviderStateMixin {
   void initState() {
     controller = TabController(length: 5, vsync: this);
     controller!.addListener(() {
-      setTabIndex = controller!.index ?? 0;
+      setTabIndex = controller!.index;
       setState(() {});
     });
     super.initState();
