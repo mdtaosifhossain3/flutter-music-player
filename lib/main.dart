@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:music_player/constants/theme.dart';
 import 'package:music_player/views/bottomNavigatonBar/bottomNavigationBar.dart';
+import 'package:music_player/views/playListSongPlayScreen/play_list_song_play_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,11 +15,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Music App',
-      debugShowCheckedModeBanner: false,
-      theme: darkTheme,
-      home: const Bottomnavigationbar(),
-      // getPages: AppRoutes.appRoutes(),
-    );
+        title: 'Music App',
+        debugShowCheckedModeBanner: false,
+        theme: darkTheme,
+        home: const PlayListSongPlayScreens() //Bottomnavigationbar(),
+        // getPages: AppRoutes.appRoutes(),
+        );
   }
 }
