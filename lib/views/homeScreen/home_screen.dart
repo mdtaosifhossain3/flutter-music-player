@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:music_player/constants/colors.dart';
 import 'package:music_player/resources/appUrls/image_urls.dart';
 import 'package:music_player/resources/components/customWidgets/custom_text.dart';
+import 'package:music_player/resources/components/widgets/box_widget.dart';
 import 'package:music_player/resources/components/widgets/song_list_widget.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -21,7 +22,8 @@ class _HomeScreenState extends State<HomeScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -44,10 +46,10 @@ class _HomeScreenState extends State<HomeScreen> {
                           return Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              ClipRRect(
-                                borderRadius: BorderRadius.circular(9),
-                                child: Image.asset(
-                                  ImageUrls.bannerURL,
+                              Padding(
+                                padding: const EdgeInsets.only(right: 5.0),
+                                child: BoxWidget(
+                                  image: ImageUrls.bannerURL,
                                   height: 125,
                                   width: 229,
                                 ),
@@ -108,14 +110,10 @@ class _HomeScreenState extends State<HomeScreen> {
                             children: [
                               Padding(
                                 padding: const EdgeInsets.only(right: 10.0),
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(9),
-                                  child: Image.asset(
-                                    ImageUrls.bannerURL,
-                                    height: 108,
-                                    width: 110,
-                                    fit: BoxFit.fill,
-                                  ),
+                                child: BoxWidget(
+                                  image: ImageUrls.bannerURL,
+                                  height: 80,
+                                  width: 108,
                                 ),
                               ),
                               const Column(
@@ -137,9 +135,6 @@ class _HomeScreenState extends State<HomeScreen> {
                         },
                       ),
                     ),
-                    const SizedBox(
-                      height: 25,
-                    ),
                     const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -156,9 +151,6 @@ class _HomeScreenState extends State<HomeScreen> {
                           fontWeight: FontWeight.bold,
                         )
                       ],
-                    ),
-                    const SizedBox(
-                      height: 20,
                     ),
                   ],
                 ),
