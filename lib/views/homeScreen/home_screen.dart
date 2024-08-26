@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:music_player/constants/colors.dart';
-import 'package:music_player/resources/appUrls/icon_urls.dart';
 import 'package:music_player/resources/appUrls/image_urls.dart';
-import 'package:music_player/resources/components/customWidgets/custom_appbar.dart';
-import 'package:music_player/resources/components/customWidgets/custom_textField.dart';
 import 'package:music_player/resources/components/customWidgets/custom_text.dart';
 import 'package:music_player/resources/components/widgets/song_list_widget.dart';
 
@@ -26,7 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -50,12 +45,12 @@ class _HomeScreenState extends State<HomeScreen> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               ClipRRect(
+                                borderRadius: BorderRadius.circular(9),
                                 child: Image.asset(
                                   ImageUrls.bannerURL,
                                   height: 125,
                                   width: 229,
                                 ),
-                                borderRadius: BorderRadius.circular(9),
                               ),
                               const Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -99,7 +94,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     const SizedBox(
                       height: 25,
                     ),
-                    Container(
+                    SizedBox(
                       height: 150,
                       child: ListView.builder(
                         padding: const EdgeInsets.all(0),
@@ -114,13 +109,13 @@ class _HomeScreenState extends State<HomeScreen> {
                               Padding(
                                 padding: const EdgeInsets.only(right: 10.0),
                                 child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(9),
                                   child: Image.asset(
                                     ImageUrls.bannerURL,
                                     height: 108,
                                     width: 110,
                                     fit: BoxFit.fill,
                                   ),
-                                  borderRadius: BorderRadius.circular(9),
                                 ),
                               ),
                               const Column(
@@ -168,7 +163,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
               ),
-              SongListWidget(
+              const SongListWidget(
                 songName: "Dil deya gallan",
                 artistName: "Atif Aslam",
               ),

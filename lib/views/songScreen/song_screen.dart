@@ -11,7 +11,7 @@ import 'package:music_player/views/artistScreen/artist_screen.dart';
 import 'package:music_player/views/genreScreen/genre_screen.dart';
 
 class SongScreen extends StatefulWidget {
-  SongScreen({super.key});
+  const SongScreen({super.key});
 
   @override
   State<SongScreen> createState() => _SongScreenState();
@@ -46,20 +46,20 @@ class _SongScreenState extends State<SongScreen> with TickerProviderStateMixin {
                 indicatorColor: pinkColor,
                 labelColor: pinkColor,
                 unselectedLabelStyle: const TextStyle(color: midWhiteColor),
-                tabs: [
-                  const Tab(
+                tabs: const [
+                  Tab(
                     text: "All Songs",
                   ),
-                  const Tab(
+                  Tab(
                     text: "Playlist",
                   ),
-                  const Tab(
+                  Tab(
                     text: "Albums",
                   ),
-                  const Tab(
+                  Tab(
                     text: "Artist",
                   ),
-                  const Tab(
+                  Tab(
                     text: "Genre",
                   ),
                 ]),
@@ -111,18 +111,18 @@ class _SongScreenState extends State<SongScreen> with TickerProviderStateMixin {
                     const SizedBox(
                       height: 30,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 10),
-                      child: const TitleWidget(
+                    const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 10),
+                      child: TitleWidget(
                         righText: "My Playlist",
                       ),
                     ),
                     const SizedBox(
                       height: 15,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 10),
-                      child: const PlayListWidget(
+                    const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 10),
+                      child: PlayListWidget(
                         coverImageheight: 60,
                         coverImagewidth: 90,
                       ),

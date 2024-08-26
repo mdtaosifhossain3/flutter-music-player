@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:music_player/constants/colors.dart';
-import 'package:music_player/resources/appUrls/icon_urls.dart';
 import 'package:music_player/resources/appUrls/image_urls.dart';
 import 'package:music_player/resources/components/customWidgets/custom_text.dart';
 import 'package:music_player/views/albumDetailsScreen/album_details_screen.dart';
-import 'package:popover/popover.dart';
 
 class GridWidget extends StatelessWidget {
   final Widget? child;
@@ -15,7 +13,7 @@ class GridWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Get.to(AlbumDetailsScreen());
+        Get.to(const AlbumDetailsScreen());
       },
       child: GridView.builder(
         shrinkWrap: true,

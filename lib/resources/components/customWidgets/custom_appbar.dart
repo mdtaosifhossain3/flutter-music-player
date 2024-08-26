@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:music_player/constants/colors.dart';
 
 PreferredSizeWidget customAppbar(
     {required BuildContext context, leadingIcon, actions, title}) {

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:music_player/constants/colors.dart';
 import 'package:music_player/resources/appUrls/image_urls.dart';
 import 'package:music_player/resources/components/customWidgets/custom_text.dart';
-import 'package:music_player/resources/components/widgets/grid_widget.dart';
 
 class GenreScreen extends StatelessWidget {
   const GenreScreen({super.key});
@@ -24,7 +22,7 @@ class GenreScreen extends StatelessWidget {
               return Container(
                 height: 118,
                 width: 162,
-                margin: EdgeInsets.only(bottom: 12, right: 12),
+                margin: const EdgeInsets.only(bottom: 12, right: 12),
                 decoration: BoxDecoration(
                     image: DecorationImage(
                         image: AssetImage(ImageUrls.bannerURL),

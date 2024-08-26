@@ -20,7 +20,7 @@ class _BottomnavigationbarState extends State<Bottomnavigationbar> {
 
   List<Widget> myScreens = [
     const HomeScreen(),
-    SongScreen(),
+    const SongScreen(),
     const SplashScreen(),
   ];
   @override

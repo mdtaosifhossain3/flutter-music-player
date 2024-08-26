@@ -1,6 +1,5 @@
 import 'dart:ui';
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:music_player/constants/colors.dart';
 import 'package:music_player/resources/appUrls/image_urls.dart';
@@ -96,10 +95,10 @@ class AlbumDetailsScreen extends StatelessWidget {
                         )
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
-                    Row(
+                    const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         CustomButton(
@@ -124,10 +123,10 @@ class AlbumDetailsScreen extends StatelessWidget {
               ),
             ]),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
-          Expanded(
+          const Expanded(
             child: SongListWidget(
               songName: "Shape of you",
               artistName: "Ed Sheran",

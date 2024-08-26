@@ -6,7 +6,7 @@ final darkTheme = ThemeData(
     brightness: Brightness.dark,
     scaffoldBackgroundColor: deepBlackColor,
     dividerColor: greyColor,
-    dividerTheme: DividerThemeData(
+    dividerTheme: const DividerThemeData(
       color: greyColor,
     ),
     appBarTheme: const AppBarTheme(

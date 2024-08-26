@@ -29,7 +29,7 @@ class SongListWidget extends StatelessWidget {
               margin: const EdgeInsets.only(bottom: 8),
               child: InkWell(
                 onTap: () {
-                  Get.to(SongPlayerScreen());
+                  Get.to(const SongPlayerScreen());
                 },
                 borderRadius: BorderRadius.circular(3),
                 child: Padding(

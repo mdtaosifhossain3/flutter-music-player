@@ -16,7 +16,7 @@ class AppRoutes {
         ),
         GetPage(
           name: RoutesName.songScreen,
-          page: () => SongScreen(),
+          page: () => const SongScreen(),
         ),
       ];
 }

@@ -18,30 +18,30 @@ class ArtistScreen extends StatelessWidget {
           itemBuilder: (context, index) {
             return InkWell(
               onTap: () {
-                Get.to(ArtistDetailsScreen());
+                Get.to(const ArtistDetailsScreen());
               },
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    margin: EdgeInsets.only(bottom: 10),
+                    margin: const EdgeInsets.only(bottom: 10),
                     width: 79,
                     height: 79,
+                    decoration: BoxDecoration(
+                        border: Border.all(color: midWhiteColor, width: 2)),
                     child: Image.asset(
                       ImageUrls.bannerURL,
                       fit: BoxFit.cover,
                     ),
-                    decoration: BoxDecoration(
-                        border: Border.all(color: midWhiteColor, width: 2)),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   Expanded(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Column(
+                        const Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             CustomText(

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:music_player/constants/colors.dart';
 import 'package:music_player/resources/appUrls/image_urls.dart';
 import 'package:music_player/resources/components/widgets/appbar_widget.dart';
-import 'package:syncfusion_flutter_gauges/gauges.dart';
 
 class SongPlayerScreen extends StatefulWidget {
   const SongPlayerScreen({super.key});
@@ -46,7 +45,7 @@ class _SongPlayerScreenState extends State<SongPlayerScreen> {
             // const SizedBox(
             //   height: 10,
             // ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.all(8.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -59,18 +58,18 @@ class _SongPlayerScreenState extends State<SongPlayerScreen> {
                         child: Text(
                           " songPlayController.songTitle.value",
                           maxLines: 1,
-                          style: const TextStyle(
+                          style: TextStyle(
                               color: Colors.white, fontSize: 16),
                         ),
                       ),
                       Icon(Icons.download_outlined, size: 25)
                     ],
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: 5,
                   ),
                   Text("songPlayController.artistName.value",
-                      style: const TextStyle(fontSize: 12))
+                      style: TextStyle(fontSize: 12))
                 ],
               ),
             ),
@@ -80,7 +79,7 @@ class _SongPlayerScreenState extends State<SongPlayerScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(""),
+                    const Text(""),
                     Flexible(
                         child: Slider(
                       value: 0,
@@ -88,7 +87,7 @@ class _SongPlayerScreenState extends State<SongPlayerScreen> {
                       min: 0,
                       max: 100,
                     )),
-                    Text("")
+                    const Text("")
                   ],
                 ),
                 // const SizedBox(
@@ -131,13 +130,13 @@ class _SongPlayerScreenState extends State<SongPlayerScreen> {
                   children: [
                     InkWell(
                         onTap: () {},
-                        child: Icon(
+                        child: const Icon(
                           Icons.shuffle_rounded,
                           color: Colors.white,
                         )),
                     InkWell(
                         onTap: () {},
-                        child: Icon(
+                        child: const Icon(
                           Icons.repeat_on_rounded,
                           color: Colors.white,
                         )),

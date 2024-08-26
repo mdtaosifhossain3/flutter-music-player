@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:music_player/constants/colors.dart';
 import 'package:music_player/resources/components/customWidgets/custom_text.dart';
-import 'package:music_player/resources/components/customWidgets/custom_textField.dart';
 
 PreferredSizeWidget appbarWidget({label}) => AppBar(
       iconTheme: const IconThemeData(
@@ -13,5 +12,5 @@ PreferredSizeWidget appbarWidget({label}) => AppBar(
         fontSize: 17,
         color: midWhiteColor,
       ),
-      actions: [Icon(Icons.search)],
+      actions: const [Icon(Icons.search)],
     );

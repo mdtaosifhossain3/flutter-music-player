@@ -45,13 +45,13 @@ class ArtistDetailsScreen extends StatelessWidget {
                   ),
                 ),
                 const Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 30),
+                  padding: EdgeInsets.symmetric(horizontal: 30),
                   child: Column(
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          const Column(
+                          Column(
                             children: [
                               CustomText(
                                 label: "Dilton Razz",
@@ -121,11 +121,11 @@ class ArtistDetailsScreen extends StatelessWidget {
                 )
               ]),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20),
               child: Column(
                 children: [
                   TitleWidget(
@@ -138,19 +138,19 @@ class ArtistDetailsScreen extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20),
               child: TitleWidget(
                 righText: "Top Songs",
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            SongListWidget(
+            const SongListWidget(
               songName: "Shape of you",
               artistName: "Ed Sheran",
             )
