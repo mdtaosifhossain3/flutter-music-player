@@ -7,13 +7,17 @@ class TitleWidget extends StatelessWidget {
   final String? leftText;
   final double? righTextfontSize;
   final double? leftTextfontSize;
+  final FontWeight? leftTextfontWeight;
+  final FontWeight? righTextfontWeight;
 
   const TitleWidget(
       {super.key,
       this.leftText,
       this.righText,
       this.righTextfontSize,
-      this.leftTextfontSize});
+      this.leftTextfontSize,
+      this.righTextfontWeight,
+      this.leftTextfontWeight});
 
   @override
   Widget build(BuildContext context) {
@@ -21,14 +25,16 @@ class TitleWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         CustomText(
-          label: righText ?? "PlayList",
+          label: leftText ?? "PlayList",
           color: midWhiteColor,
-          fontSize: righTextfontSize ?? 15,
+          fontSize: leftTextfontSize ?? 15,
+          fontWeight: leftTextfontWeight,
         ),
         CustomText(
-          label: leftText ?? "view All",
+          label: righText ?? "view All",
           color: coralColor,
-          fontSize: leftTextfontSize ?? 13,
+          fontSize: righTextfontSize ?? 13,
+          fontWeight: righTextfontWeight,
         )
       ],
     );

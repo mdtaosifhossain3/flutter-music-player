@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:music_player/constants/colors.dart';
 import 'package:music_player/resources/appUrls/image_urls.dart';
 import 'package:music_player/resources/components/customWidgets/custom_text.dart';
+import 'package:music_player/resources/components/widgets/box_widget.dart';
 
 class PlayListWidget extends StatelessWidget {
   final double? coverImageheight;
@@ -24,17 +25,13 @@ class PlayListWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: const EdgeInsets.only(right: 10.0),
-                child: Container(
-                  height: coverImageheight ?? 108,
-                  width: coverImagewidth ?? 110,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(9),
-                      border: Border.all(color: deepBlackColor),
-                      image: DecorationImage(
-                          fit: BoxFit.cover, image: AssetImage(ImageUrls.h))),
-                ),
-              ),
+                  padding: const EdgeInsets.only(right: 10.0),
+                  child: BoxWidget(
+                    image: ImageUrls.h,
+                    height: coverImageheight ?? 108,
+                    width: coverImagewidth ?? 110,
+                    fit: BoxFit.fill,
+                  )),
               const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [

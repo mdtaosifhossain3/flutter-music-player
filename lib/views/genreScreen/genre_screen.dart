@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:music_player/resources/appUrls/image_urls.dart';
 import 'package:music_player/resources/components/customWidgets/custom_text.dart';
+import 'package:music_player/resources/components/widgets/box_widget.dart';
+import 'package:music_player/resources/components/widgets/grid_widget.dart';
 
 class GenreScreen extends StatelessWidget {
   const GenreScreen({super.key});
@@ -9,43 +11,37 @@ class GenreScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-        child: GridView.builder(
-            shrinkWrap: true,
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                crossAxisSpacing: 5,
-                mainAxisSpacing: 1,
-                childAspectRatio: 0.95),
+        padding: const EdgeInsets.symmetric(horizontal: 15),
+        child: GridWidget(
+            crossAxisCount: 2,
+            crossAxisSpacing: 14,
+            childAspectRatio: 1.2,
             itemCount: 10,
-            itemBuilder: (context, index) {
-              return Container(
+            child: Stack(alignment: Alignment.center, children: [
+              BoxWidget(
+                image: ImageUrls.bannerURL,
                 height: 118,
                 width: 162,
-                margin: const EdgeInsets.only(bottom: 12, right: 12),
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage(ImageUrls.bannerURL),
-                        fit: BoxFit.cover)),
-                child: const Center(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      CustomText(
-                        label: "Classical",
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold,
-                      ),
-                      CustomText(
-                        label: "456 Songs",
-                        fontSize: 10,
-                      )
-                    ],
-                  ),
+                fit: BoxFit.fill,
+              ),
+              const Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    CustomText(
+                      label: "Classical",
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    CustomText(
+                      label: "456 Songs",
+                      fontSize: 10,
+                    )
+                  ],
                 ),
-              );
-            }),
+              ),
+            ])),
       ),
     );
   }

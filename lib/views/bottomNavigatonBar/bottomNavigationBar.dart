@@ -136,9 +136,17 @@ class _BottomnavigationbarState extends State<Bottomnavigationbar> {
           ),
         ),
         appBar: AppBar(
-          iconTheme: const IconThemeData(
-            size: 30,
-          ),
+          leading: Builder(builder: (context) {
+            return InkWell(
+              focusColor: Colors.transparent,
+              hoverColor: Colors.transparent,
+              highlightColor: Colors.transparent,
+              onTap: () {
+                Scaffold.of(context).openDrawer();
+              },
+              child: Image.asset(IconUrls.menuIconURL),
+            );
+          }),
           centerTitle: true,
           title: currentIdx == 0
               ? const Row(

@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 import 'package:music_player/constants/colors.dart';
 import 'package:music_player/resources/appUrls/image_urls.dart';
 import 'package:music_player/resources/components/customWidgets/custom_text.dart';
+import 'package:music_player/resources/components/widgets/box_widget.dart';
+import 'package:music_player/resources/components/widgets/pop_menu_button_widget.dart';
 import 'package:music_player/views/artistDetailsScreen/artist_details_screen.dart';
 
 class ArtistScreen extends StatelessWidget {
@@ -23,25 +25,23 @@ class ArtistScreen extends StatelessWidget {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Container(
-                    margin: const EdgeInsets.only(bottom: 10),
-                    width: 79,
-                    height: 79,
-                    decoration: BoxDecoration(
-                        border: Border.all(color: midWhiteColor, width: 2)),
-                    child: Image.asset(
-                      ImageUrls.bannerURL,
-                      fit: BoxFit.cover,
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 10.0),
+                    child: BoxWidget(
+                      image: ImageUrls.bannerURL,
+                      width: 79,
+                      height: 79,
+                      fit: BoxFit.fill,
                     ),
                   ),
                   const SizedBox(
                     width: 10,
                   ),
-                  Expanded(
+                  const Expanded(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        const Column(
+                        Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             CustomText(
@@ -70,67 +70,7 @@ class ArtistScreen extends StatelessWidget {
                             )
                           ],
                         ),
-                        PopupMenuButton(
-                            icon: const Icon(Icons.more_vert),
-                            padding: EdgeInsets.zero,
-                            itemBuilder: (context) {
-                              return [
-                                const PopupMenuItem(
-                                    height: 28,
-                                    child: CustomText(
-                                      label: "Play",
-                                      fontSize: 13,
-                                    )),
-                                const PopupMenuItem(
-                                    height: 28,
-                                    child: CustomText(
-                                      label: "Play next",
-                                      fontSize: 13,
-                                    )),
-                                const PopupMenuItem(
-                                    height: 28,
-                                    child: CustomText(
-                                      label: "Add to playing queue",
-                                      fontSize: 13,
-                                    )),
-                                const PopupMenuItem(
-                                    height: 28,
-                                    child: CustomText(
-                                      label: "Add to playlist",
-                                      fontSize: 13,
-                                    )),
-                                const PopupMenuItem(
-                                    height: 28,
-                                    child: CustomText(
-                                      label: "Rename",
-                                      fontSize: 13,
-                                    )),
-                                const PopupMenuItem(
-                                    height: 28,
-                                    child: CustomText(
-                                      label: "Tag editor",
-                                      fontSize: 13,
-                                    )),
-                                const PopupMenuItem(
-                                    height: 28,
-                                    child: CustomText(
-                                      label: "Go to artist",
-                                      fontSize: 13,
-                                    )),
-                                const PopupMenuItem(
-                                    height: 28,
-                                    child: CustomText(
-                                      label: "Delete from device",
-                                      fontSize: 13,
-                                    )),
-                                const PopupMenuItem(
-                                    height: 28,
-                                    child: CustomText(
-                                      label: "share",
-                                      fontSize: 13,
-                                    )),
-                              ];
-                            }),
+                        PopMenuButtonWidget()
                       ],
                     ),
                   )

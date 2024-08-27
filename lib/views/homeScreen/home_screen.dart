@@ -4,6 +4,7 @@ import 'package:music_player/resources/appUrls/image_urls.dart';
 import 'package:music_player/resources/components/customWidgets/custom_text.dart';
 import 'package:music_player/resources/components/widgets/box_widget.dart';
 import 'package:music_player/resources/components/widgets/song_list_widget.dart';
+import 'package:music_player/resources/components/widgets/title_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -54,19 +55,20 @@ class _HomeScreenState extends State<HomeScreen> {
                                   width: 229,
                                 ),
                               ),
-                              const Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  CustomText(
-                                    label: "Woh Lam He",
-                                    fontSize: 13,
-                                  ),
-                                  CustomText(
-                                    label: "Atif Aslam",
-                                    fontSize: 10,
-                                    color: greyColor,
-                                  )
-                                ],
+                              const Padding(
+                                padding: EdgeInsets.only(left: 8.0),
+                                child: CustomText(
+                                  label: "Woh Lam He",
+                                  fontSize: 13,
+                                ),
+                              ),
+                              const Padding(
+                                padding: EdgeInsets.only(left: 8.0),
+                                child: CustomText(
+                                  label: "Atif Aslam",
+                                  fontSize: 10,
+                                  color: greyColor,
+                                ),
                               )
                             ],
                           );
@@ -79,22 +81,13 @@ class _HomeScreenState extends State<HomeScreen> {
                     const SizedBox(
                       height: 25,
                     ),
-                    const Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        CustomText(
-                          label: "PlayList",
-                          color: midWhiteColor,
-                        ),
-                        CustomText(
-                          label: "view All",
-                          color: coralColor,
-                          fontSize: 14,
-                        )
-                      ],
+                    const TitleWidget(
+                      leftText: "PlayList",
+                      leftTextfontSize: 18,
+                      righTextfontSize: 14,
                     ),
                     const SizedBox(
-                      height: 25,
+                      height: 10,
                     ),
                     SizedBox(
                       height: 150,
@@ -135,22 +128,13 @@ class _HomeScreenState extends State<HomeScreen> {
                         },
                       ),
                     ),
-                    const Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        CustomText(
-                          label: "Cloud Song",
-                          color: midWhiteColor,
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
-                        ),
-                        CustomText(
-                          label: "Device Song",
-                          color: coralColor,
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
-                        )
-                      ],
+                    const TitleWidget(
+                      leftText: "Cloud Song",
+                      leftTextfontSize: 14,
+                      righText: "Device Song",
+                      righTextfontSize: 14,
+                      leftTextfontWeight: FontWeight.bold,
+                      righTextfontWeight: FontWeight.bold,
                     ),
                   ],
                 ),
