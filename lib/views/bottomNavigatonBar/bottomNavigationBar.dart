@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:music_player/constants/colors.dart';
 import 'package:music_player/resources/appUrls/icon_urls.dart';
-import 'package:music_player/resources/appUrls/image_urls.dart';
 import 'package:music_player/resources/components/customWidgets/custom_text.dart';
 import 'package:music_player/resources/components/customWidgets/custom_textField.dart';
+import 'package:music_player/resources/components/widgets/drawer_widget.dart';
 import 'package:music_player/views/homeScreen/home_screen.dart';
 import 'package:music_player/views/settingsScreen/settings_screen.dart';
 import 'package:music_player/views/songScreen/song_screen.dart';
@@ -27,114 +27,7 @@ class _BottomnavigationbarState extends State<Bottomnavigationbar> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        drawer: Drawer(
-          backgroundColor: deepBlackColor,
-          shadowColor: greyColor,
-          elevation: 20,
-          child: ListView(
-            children: [
-              DrawerHeader(
-                  decoration: const BoxDecoration(color: drawerHeaderColor),
-                  child: Column(
-                    children: [
-                      Image.asset(
-                        ImageUrls.logoURL,
-                        width: 55,
-                      ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      const Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Column(
-                            children: [
-                              CustomText(
-                                label: "887",
-                                fontSize: 12,
-                              ),
-                              CustomText(
-                                label: "Songs",
-                                fontSize: 12,
-                                color: greyColor,
-                              ),
-                            ],
-                          ),
-                          Column(
-                            children: [
-                              CustomText(
-                                label: "887",
-                                fontSize: 12,
-                              ),
-                              CustomText(
-                                label: "Songs",
-                                fontSize: 12,
-                                color: greyColor,
-                              ),
-                            ],
-                          ),
-                          Column(
-                            children: [
-                              CustomText(
-                                label: "887",
-                                fontSize: 12,
-                              ),
-                              CustomText(
-                                label: "Songs",
-                                fontSize: 12,
-                                color: greyColor,
-                              ),
-                            ],
-                          ),
-                        ],
-                      )
-                    ],
-                  )),
-              ListTile(
-                leading: Image.asset(IconUrls.paintIconURL),
-                title: const Text('Themes'),
-                onTap: () {
-                  Navigator.pop(context);
-                },
-              ),
-              ListTile(
-                leading: Image.asset(IconUrls.scissorsIconURL),
-                title: const Text('Ringtone Cutter'),
-                onTap: () {
-                  Navigator.pop(context);
-                },
-              ),
-              ListTile(
-                leading: Image.asset(IconUrls.stopwatchIconURL),
-                title: const Text('SleepTimer'),
-                onTap: () {
-                  Navigator.pop(context);
-                },
-              ),
-              ListTile(
-                leading: Image.asset(IconUrls.carIconURL),
-                title: const Text('Driver Mode'),
-                onTap: () {
-                  Navigator.pop(context);
-                },
-              ),
-              ListTile(
-                leading: Image.asset(IconUrls.folderIconURL),
-                title: const Text('Hidden Folders'),
-                onTap: () {
-                  Navigator.pop(context);
-                },
-              ),
-              ListTile(
-                leading: Image.asset(IconUrls.soundBarIconURL),
-                title: const Text('Equaliser'),
-                onTap: () {
-                  Navigator.pop(context);
-                },
-              ),
-            ],
-          ),
-        ),
+        drawer: const DrawerWidget(),
         appBar: AppBar(
           leading: Builder(builder: (context) {
             return InkWell(
@@ -169,7 +62,14 @@ class _BottomnavigationbarState extends State<Bottomnavigationbar> {
                       fontSize: 17,
                       color: midWhiteColor,
                     ),
-          actions: currentIdx != 0 ? [const Icon(Icons.search)] : null,
+          actions: currentIdx != 0
+              ? [
+                  const Padding(
+                    padding: EdgeInsets.only(right: 8.0),
+                    child: Icon(Icons.search),
+                  )
+                ]
+              : null,
         ),
         backgroundColor: bottomBarColor,
         bottomNavigationBar: Container(

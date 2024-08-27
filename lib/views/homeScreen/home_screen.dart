@@ -102,7 +102,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Padding(
-                                padding: const EdgeInsets.only(right: 10.0),
+                                padding: const EdgeInsets.only(right: 15.0),
                                 child: BoxWidget(
                                   image: ImageUrls.bannerURL,
                                   height: 80,

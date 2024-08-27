@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:music_player/constants/theme.dart';
 import 'package:music_player/views/bottomNavigatonBar/bottomNavigationBar.dart';
-import 'package:music_player/views/playListSongPlayScreen/play_list_song_play_screen.dart';
 
 void main() {
   runApp(const MyApp());

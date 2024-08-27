@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:music_player/constants/colors.dart';
 import 'package:music_player/resources/components/widgets/song_list_widget.dart';
-import 'package:music_player/views/albumsScreen/album_screen.dart';
-import 'package:music_player/views/artistScreen/artist_screen.dart';
-import 'package:music_player/views/genreScreen/genre_screen.dart';
-import 'package:music_player/views/playListScreen/play_list_screen.dart';
+import 'package:music_player/views/songScreen/albumsScreen/album_screen.dart';
+import 'package:music_player/views/songScreen/artistScreen/artist_screen.dart';
+import 'package:music_player/views/songScreen/genreScreen/genre_screen.dart';
+import 'package:music_player/views/songScreen/playListScreen/play_list_screen.dart';
 
 class SongScreen extends StatefulWidget {
   const SongScreen({super.key});

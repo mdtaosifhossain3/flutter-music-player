@@ -5,7 +5,7 @@ import 'package:music_player/resources/appUrls/image_urls.dart';
 import 'package:music_player/resources/components/customWidgets/custom_text.dart';
 import 'package:music_player/resources/components/widgets/box_widget.dart';
 import 'package:music_player/resources/components/widgets/pop_menu_button_widget.dart';
-import 'package:music_player/views/artistDetailsScreen/artist_details_screen.dart';
+import 'package:music_player/views/songScreen/artistScreen/artistDetailsScreen/artist_details_screen.dart';
 
 class ArtistScreen extends StatelessWidget {
   const ArtistScreen({super.key});
