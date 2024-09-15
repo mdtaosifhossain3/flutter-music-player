@@ -6,6 +6,7 @@ import 'package:music_player/resources/appUrls/image_urls.dart';
 import 'package:music_player/resources/components/customWidgets/custom_button.dart';
 import 'package:music_player/resources/components/customWidgets/custom_text.dart';
 import 'package:music_player/resources/components/widgets/appbar_widget.dart';
+import 'package:music_player/resources/components/widgets/box_widget.dart';
 import 'package:music_player/resources/components/widgets/song_list_widget.dart';
 
 class AlbumDetailsScreen extends StatelessWidget {
@@ -36,7 +37,7 @@ class AlbumDetailsScreen extends StatelessWidget {
                         image: DecorationImage(
                             colorFilter: const ColorFilter.linearToSrgbGamma(),
                             image: AssetImage(ImageUrls.bannerURL),
-                            fit: BoxFit.cover)),
+                            fit: BoxFit.fill)),
                   ),
                 ),
               ),
@@ -48,16 +49,11 @@ class AlbumDetailsScreen extends StatelessWidget {
                   children: [
                     Row(
                       children: [
-                        Container(
+                        BoxWidget(
+                          image: ImageUrls.bannerURL,
                           width: 87,
                           height: 87,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(9),
-                            border: Border.all(color: midWhiteColor),
-                            image: DecorationImage(
-                                image: AssetImage(ImageUrls.bannerURL),
-                                fit: BoxFit.cover),
-                          ),
+                          fit: BoxFit.fill,
                         ),
                         const SizedBox(
                           width: 20,
@@ -126,7 +122,7 @@ class AlbumDetailsScreen extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          const Expanded(
+          Expanded(
             child: SongListWidget(
               songName: "Shape of you",
               artistName: "Ed Sheran",

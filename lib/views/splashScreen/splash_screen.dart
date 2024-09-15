@@ -13,7 +13,7 @@ class _SplashScreenState extends State<SplashScreen> {
   SplashScreenService screenService = SplashScreenService();
   @override
   void initState() {
-    // screenService.loadScreen();
+    screenService.loadScreen();
     super.initState();
   }
 

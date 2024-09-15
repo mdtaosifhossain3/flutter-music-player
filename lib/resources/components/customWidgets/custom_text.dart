@@ -20,6 +20,8 @@ class CustomText extends StatelessWidget {
     return Text(
       label,
       textAlign: textAlign ?? TextAlign.left,
+      maxLines: 1,
+      overflow: TextOverflow.ellipsis,
       style: TextStyle(
           color: color ?? primaryColor,
           fontSize: fontSize,

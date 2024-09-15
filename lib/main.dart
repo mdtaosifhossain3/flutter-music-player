@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:music_player/constants/theme.dart';
-import 'package:music_player/views/bottomNavigatonBar/bottomNavigationBar.dart';
+import 'package:music_player/views/splashScreen/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,8 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'Music App',
       debugShowCheckedModeBanner: false,
       theme: darkTheme,
-      home: const Bottomnavigationbar(),
-      // getPages: AppRoutes.appRoutes(),
+      home: const SplashScreen(), // getPages: AppRoutes.appRoutes(),
     );
   }
 }

@@ -19,8 +19,8 @@ class _BottomnavigationbarState extends State<Bottomnavigationbar> {
   int currentIdx = 0;
 
   List<Widget> myScreens = [
-    const HomeScreen(),
-    const SongScreen(),
+    HomeScreen(),
+    SongScreen(),
     const SettingsScreen(),
   ];
   @override

@@ -1,19 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:music_player/constants/colors.dart';
 import 'package:music_player/resources/appUrls/image_urls.dart';
 import 'package:music_player/resources/components/customWidgets/custom_text.dart';
 import 'package:music_player/resources/components/widgets/box_widget.dart';
 import 'package:music_player/resources/components/widgets/song_list_widget.dart';
 import 'package:music_player/resources/components/widgets/title_widget.dart';
+import 'package:music_player/view_models/controllers/song_play_controller.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+  HomeScreen({super.key});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  final SongPlayController _songPlayController = Get.put(SongPlayController());
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -129,19 +133,18 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                     const TitleWidget(
-                      leftText: "Cloud Song",
+                      leftText: "Device Song",
                       leftTextfontSize: 14,
-                      righText: "Device Song",
-                      righTextfontSize: 14,
                       leftTextfontWeight: FontWeight.bold,
-                      righTextfontWeight: FontWeight.bold,
                     ),
                   ],
                 ),
               ),
-              const SongListWidget(
+              SongListWidget(
                 songName: "Dil deya gallan",
                 artistName: "Atif Aslam",
+                controller: _songPlayController,
+                songlist: _songPlayController.songList,
               ),
             ],
           ),

@@ -64,20 +64,20 @@ class _SongScreenState extends State<SongScreen> with TickerProviderStateMixin {
             height: 20,
           ),
           Expanded(
-            child: TabBarView(controller: controller, children: const [
+            child: TabBarView(controller: controller, children: [
               //All Songs
               SongListWidget(
                 songName: "Dil deya gallan",
                 artistName: "Atif Aslam",
               ),
               //PlayList
-              PlayListScreen(),
+              const PlayListScreen(),
               //Albums
-              AlbumScreen(),
+              const AlbumScreen(),
               //Artist
-              ArtistScreen(),
+              const ArtistScreen(),
               //All Genre
-              GenreScreen(),
+              const GenreScreen(),
             ]),
           )
         ],

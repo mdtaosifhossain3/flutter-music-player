@@ -1,8 +1,22 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Common permissions -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- Permissions for Android 12 (API 31) and below -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- Permissions for Android 13 (API 33) and above -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+    <!-- Permission for accessing all files on Android 11 (API 30) and above -->
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
     <application
         android:label="music_player"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/ic_launcher"
+        android:usesCleartextTraffic="true"
+        android:requestLegacyExternalStorage="true">
+        
         <activity
             android:name=".MainActivity"
             android:exported="true"

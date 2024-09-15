@@ -40,7 +40,7 @@ class ArtistDetailsScreen extends StatelessWidget {
                               colorFilter:
                                   const ColorFilter.linearToSrgbGamma(),
                               image: AssetImage(ImageUrls.bannerURL),
-                              fit: BoxFit.cover)),
+                              fit: BoxFit.fill)),
                     ),
                   ),
                 ),
@@ -150,7 +150,7 @@ class ArtistDetailsScreen extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            const SongListWidget(
+            SongListWidget(
               songName: "Shape of you",
               artistName: "Ed Sheran",
             )

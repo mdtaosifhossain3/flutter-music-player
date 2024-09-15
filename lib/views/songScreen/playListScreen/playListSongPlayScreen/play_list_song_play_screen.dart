@@ -65,7 +65,7 @@ class PlayListSongPlayScreens extends StatelessWidget {
                 primary: false,
                 itemCount: 100,
                 itemBuilder: (context, index) {
-                  return const SongListWidget(
+                  return SongListWidget(
                     songName: "Mujhe Pene do",
                     artistName: "Dharsan Rawal",
                   );
